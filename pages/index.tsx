@@ -1,5 +1,6 @@
 import { client } from '../libs/client';
 import type { Blog } from '../types/article';
+import Link from 'next/link';
 
 type Props = {
   blogs: Array<Blog>;
@@ -19,7 +20,11 @@ export default function Home({ blogs }: Props) {
               src={blog.eyecatch.url}
               alt="Sunset in the mountains"
             />
-            <div className="px-6 py-4 text-black">{blog.title}</div>
+            <div className="px-6 py-4 text-black">
+              <Link href={`/article/${blog.id}`} passHref>
+                <a>{blog.title}</a>
+              </Link>
+            </div>
             <div className="px-6 pt-4 pb-2">
               {blog.category && (
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
