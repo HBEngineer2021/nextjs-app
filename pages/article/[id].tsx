@@ -8,29 +8,27 @@ type Props = {
 
 export default function Article({ blog }: Props) {
   return (
-    <div className="bg-slate-800">
-      <div className="px-10 py-6 mx-auto">
-        <div className="max-w-3xl px-10 py-6 mx-auto bg-slate-800">
+    <div className="bg-slate-800 py-10">
+      <div className="rounded-lg bg-black max-w-screen-md py-10 mx-auto">
+        <div className="flex justify-center">
           <img
-            className="object-cover w-full shadow-sm h-full"
+            className="object-cover w-4/5 h-4/5"
             src={blog.eyecatch.url}
           />
-          <div className="mt-2">
-            <div className="sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-blue-500">
-              {blog.title}
-            </div>
+        </div>
+        <div className="px-10 py-5 mt-2">
+          <div className="sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-white">
+            {blog.title}
           </div>
           {blog.category && (
             <div className="flex items-center justify-start mt-4 mb-4">
-              <div className="px-2 py-1 font-bold bg-red-400 text-white rounded-lg">
+              <div className="text-sm px-2 py-1 font-bold bg-indigo-400 text-white rounded-full">
                 #{blog.category}
               </div>
             </div>
           )}
           <div className="mt-2">
-            <div className="text-2xl text-white mt-4 rounded ">
-              {blog.content}
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: blog.content }} />
           </div>
         </div>
       </div>
