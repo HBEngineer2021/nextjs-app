@@ -17,7 +17,7 @@ const FooterContainer = styled('div')({
     flexWrap: 'wrap',
 });
 
-export const Footer = memo(() => {
+export const Footer = memo(function footer() {
     return (
         <FooterContainer>
             <Grid item xs={10} md={8}>
