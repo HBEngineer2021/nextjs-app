@@ -1,6 +1,9 @@
 import { GetServerSideProps } from 'next';
 import type { Blog } from '../../types/article';
 import { client } from '../../libs/client';
+import cheerio from "cheerio";
+import hljs from "highlight.js";
+import "highlight.js/styles/hybrid.css";
 
 type Props = {
   blog: Blog;
@@ -8,15 +11,15 @@ type Props = {
 
 export default function Article({ blog }: Props) {
   return (
-    <div className="bg-slate-800 py-10">
-      <div className="rounded-lg bg-black max-w-screen-md py-10 mx-auto">
+    <div className="bg-black py-10">
+      <div className="rounded-md bg-gray-800 max-w-screen-md p-10 mx-auto">
         <div className="flex justify-center">
           <img
-            className="object-cover w-4/5 h-4/5"
+            className="object-cover w-full h-full"
             src={blog.eyecatch.url}
           />
         </div>
-        <div className="px-10 py-5 mt-2">
+        <div className="mt-5">
           <div className="sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-white">
             {blog.title}
           </div>
@@ -27,7 +30,7 @@ export default function Article({ blog }: Props) {
               </div>
             </div>
           )}
-          <div className="mt-2">
+          <div className="mt-5 text-white">
             <div dangerouslySetInnerHTML={{ __html: blog.content }} />
           </div>
         </div>
@@ -44,9 +47,17 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
     contentId: idExceptArray,
   });
 
+  const $ = cheerio.load(data.content);
+  $("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text());
+    $(elm).html(result.value);
+    $(elm).addClass("hljs");
+  });
+
   return {
     props: {
       blog: data,
+      highlightedBody: $.html(),
     },
   };
 };
