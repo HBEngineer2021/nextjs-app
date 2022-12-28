@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const FooterContainer = styled('div')({
-    backgroundColor: '#000000',
+    backgroundColor: '#27272A',
     margin: '0 auto',
     paddingTop: '30px',
     paddingBottom: '30px',
@@ -23,10 +23,10 @@ export const Footer = memo(function footer() {
             <Grid item xs={10} md={8}>
                 <div className="border-t-4 border-indigo-500 ..."></div>
                 <Grid item sx={{ textAlign: 'center' }}>
-                    <a href='https://twitter.com/napi_nami'>
+                    <a href='https://twitter.com/HB_itprog'>
                         <TwitterIcon sx={{ m: 1 }} />
                     </a>
-                    <a href='https://github.com/hinakonagao'>
+                    <a href='https://github.com/HBEngineer2021'>
                         <GitHubIcon sx={{ m: 1 }} />
                     </a>
                 </Grid>
