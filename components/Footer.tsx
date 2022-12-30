@@ -31,7 +31,7 @@ export const Footer = memo(function footer() {
                     </a>
                 </Grid>
                 <Typography variant='body2' sx={{ textAlign: 'center', fontWeight: '200' }}>
-                    © 2022 my blog
+                    © 2022 - 2023 App.Dev Docs
                 </Typography>
             </Grid>
         </FooterContainer>
