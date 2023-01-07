@@ -35,6 +35,14 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     $(elm).html(result.value);
     $(elm).addClass("hljs");
   });
+  $('iframe').each((_, elm) => {
+    const wrapDiv =
+      $('<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"></div>')
+    $(elm).wrap(wrapDiv)
+    $(elm).attr('width', null)
+      .attr('height', null)
+      .attr('style', 'border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;')
+  })
 
   return {
     props: {

@@ -15,25 +15,30 @@ const FooterContainer = styled('div')({
     display: 'flex',
     justifyContent: 'space-around',
     flexWrap: 'wrap',
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
 });
 
 export const Footer = memo(function footer() {
     return (
-        <FooterContainer>
-            <Grid item xs={10} md={8}>
-                <div className="border-t-4 border-indigo-500 ..."></div>
-                <Grid item sx={{ textAlign: 'center' }}>
-                    <a href='https://twitter.com/HB_itprog'>
-                        <TwitterIcon sx={{ m: 1 }} />
-                    </a>
-                    <a href='https://github.com/HBEngineer2021'>
-                        <GitHubIcon sx={{ m: 1 }} />
-                    </a>
+        <div className='relative pb-32 box-border'>
+            <FooterContainer>
+                <Grid item xs={10} md={8}>
+                    <div className="border-t-4 border-indigo-500 ..."></div>
+                    <Grid item sx={{ textAlign: 'center' }}>
+                        <a href='https://twitter.com/HB_itprog'>
+                            <TwitterIcon sx={{ m: 1 }} />
+                        </a>
+                        <a href='https://github.com/HBEngineer2021'>
+                            <GitHubIcon sx={{ m: 1 }} />
+                        </a>
+                    </Grid>
+                    <Typography variant='body2' sx={{ textAlign: 'center', fontWeight: '200' }}>
+                        © 2022 - 2023 Mobile Developer Docs
+                    </Typography>
                 </Grid>
-                <Typography variant='body2' sx={{ textAlign: 'center', fontWeight: '200' }}>
-                    © 2022 - 2023 App.Dev Docs
-                </Typography>
-            </Grid>
-        </FooterContainer>
+            </FooterContainer>
+        </div>
     );
 });

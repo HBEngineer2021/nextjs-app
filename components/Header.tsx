@@ -14,8 +14,8 @@ export default function Header() {
     <nav className="flex items-center justify-between flex-wrap bg-zinc-800 p-5">
       <div className="flex items-center flex-shrink-0 text-white">
         <Link href={'/'} passHref>
-          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <span className="sm:ml-0 md:ml-0 lg:ml-52 ml: text-xl text-white">App.Dev Docs</span>
+          <a className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-2">
+            <span className="sm:ml-0 md:ml-0 lg:ml-52 ml: text-xl text-white">Mobile Developer Docs</span>
           </a>
         </Link>
       </div>
