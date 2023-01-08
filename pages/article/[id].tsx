@@ -62,7 +62,7 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
    highlightedBody,
   }: Props) => {
   return (
-    <div className="bg-black py-10">
+    <div className="bg-black py-10 bg-black w-full">
       <div className="rounded-md bg-zinc-700 max-w-screen-md p-10 mx-auto">
         <div className="flex justify-center">
           <img
