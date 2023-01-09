@@ -66,8 +66,8 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     <div className="bg-black py-10">
       <Head>
         <title>{blog.title}</title>
-        <meta name="description" content={blog.content} />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Mobile Developer Docs" />
+        <meta property="og:image" content={blog.eyecatch.url} />
       </Head>
       <div className="rounded-md bg-zinc-700 max-w-screen-md p-10 mx-auto">
         <div className="flex justify-center">
