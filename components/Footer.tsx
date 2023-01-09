@@ -2,8 +2,10 @@ import { memo } from 'react';
 // materialUI
 import { Grid, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import NoteIcon from '@mui/icons-material/Note';
+import AppleIcon from '@mui/icons-material/Apple';
+import AdbIcon from '@mui/icons-material/Adb';
 
 const FooterContainer = styled('div')({
     backgroundColor: '#27272A',
@@ -25,13 +27,19 @@ export const Footer = memo(function footer() {
         <div className='relative pb-32 box-border'>
             <FooterContainer>
                 <Grid item xs={10} md={8}>
-                    <div className="border-t-4 border-indigo-500 ..."></div>
+                    <div className="border-t-4 border-indigo-500"></div>
                     <Grid item sx={{ textAlign: 'center' }}>
-                        <a href='https://twitter.com/HB_itprog'>
-                            <TwitterIcon sx={{ m: 1 }} />
-                        </a>
                         <a href='https://github.com/HBEngineer2021'>
                             <GitHubIcon sx={{ m: 1 }} />
+                        </a>
+                        <a href='https://note.com/branch_it_sol205'>
+                            <NoteIcon sx={{ m: 1 }} />
+                        </a>
+                        <a href='https://developer.apple.com/documentation/technologies'>
+                            <AppleIcon sx={{ m: 1 }} />
+                        </a>
+                        <a href='https://developer.android.com/guide'>
+                            <AdbIcon sx={{ m: 1 }} />
                         </a>
                     </Grid>
                     <Typography variant='body2' sx={{ textAlign: 'center', fontWeight: '200' }}>
