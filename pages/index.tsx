@@ -30,7 +30,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               alt="Sunset in the mountains"
             />
             <div className="transition ease-in-out delay-150 text-white hover:text-zinc-600 duration-30 px-6 py-4 font-bold text-lg">
-              <Link href={`/article/${blog.id}`} passHref>
+              <Link href={`/article/${blog.id}/`} passHref>
                 <a>{blog.title}</a>
               </Link>
             </div>
