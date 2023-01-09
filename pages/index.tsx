@@ -14,8 +14,8 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <div className="bg-black">
       <Head>
-        <title>記事一覧</title>
-        <meta name="description" content="Mobile Developer Docs" />
+        <title>記事一覧 | Mobile Developer Docs</title>
+        <meta name="description" content="iOS & Android Developer Documentation" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="container text-white font-bold text-lg mx-auto px-10 pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
