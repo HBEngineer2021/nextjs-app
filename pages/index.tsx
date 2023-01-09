@@ -23,7 +23,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               src={blog.eyecatch.url}
               alt="Sunset in the mountains"
             />
-            <div className="px-6 py-4 text-white font-bold text-lg">
+            <div className="transition ease-in-out delay-150 text-white hover:text-zinc-600 duration-30 px-6 py-4 font-bold text-lg">
               <Link href={`/article/${blog.id}`} passHref>
                 <a>{blog.title}</a>
               </Link>
