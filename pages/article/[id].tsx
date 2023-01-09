@@ -1,9 +1,9 @@
-import { 
+import {
   GetStaticProps,
   GetStaticPaths,
   InferGetStaticPropsType,
   NextPage
- } from 'next';
+} from 'next';
 import type { Blog } from '../../types/article';
 import { client } from '../../libs/client';
 import cheerio from 'cheerio';
@@ -11,6 +11,7 @@ import hljs from 'highlight.js'
 import "highlight.js/styles/hybrid.css";
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import styles from '../../styles/Home.module.scss';
+import Head from 'next/head';
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const data = await client.get({ endpoint: "blogs" });
@@ -21,7 +22,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 
 export const getStaticProps: GetStaticProps<Props, Params> = async (
   ctx
-  ) => {
+) => {
   const id = ctx.params?.id;
   const idExceptArray = id instanceof Array ? id[0] : id;
   const data = await client.get({
@@ -58,11 +59,16 @@ type Props = {
 };
 
 const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-   blog,
-   highlightedBody,
-  }: Props) => {
+  blog,
+  highlightedBody,
+}: Props) => {
   return (
     <div className="bg-black py-10">
+      <Head>
+        <title>{blog.title}</title>
+        <meta name="description" content={blog.content} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="rounded-md bg-zinc-700 max-w-screen-md p-10 mx-auto">
         <div className="flex justify-center">
           <img
@@ -83,9 +89,9 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           )}
           <div className="mt-5 text-white">
             <div dangerouslySetInnerHTML={{
-               __html: highlightedBody
-               }}
-               className={styles.post}
+              __html: highlightedBody
+            }}
+              className={styles.post}
             />
           </div>
         </div>
