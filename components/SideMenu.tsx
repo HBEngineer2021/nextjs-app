@@ -16,7 +16,7 @@ export function SideMenu({
                 <div className="container p-6 grid grid-cols-2 gap-2">
                     {categories.map(category => (
                         <div className="p-2">
-                            <span className="inline-block bg-zinc-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+                            <span className="inline-block bg-zinc-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700" key={category.id}>
                                 #{category.name}
                             </span>
                         </div>

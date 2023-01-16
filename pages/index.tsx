@@ -25,6 +25,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <h1 className="container text-white font-bold text-lg mx-auto px-10 pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
         記事一覧
       </h1>
+      <div className="container mx-auto grid md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
         <div className="container mx-auto p-10 grid grid-cols-1 col-span-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
           {blogs.map(blog => (
             <div className="shadow-lg p-3 mb-5 bg-zinc-700 rounded" key={blog.id}>
@@ -49,6 +50,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           ))}
         </div>
         <SideMenu categories={categories} />
+      </div>
     </div>
   );
 }
