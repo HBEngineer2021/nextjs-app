@@ -49,7 +49,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             </div>
           ))}
         </div>
-        <SideMenu categories={categories} />
+        {/* <SideMenu categories={categories} /> */}
       </div>
     </div>
   );
