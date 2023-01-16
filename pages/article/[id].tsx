@@ -14,7 +14,7 @@ import styles from '../../styles/Home.module.scss';
 import Head from 'next/head';
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const data = await client.get({ endpoint: "blogs" });
+  const data = await client.get({ endpoint: "blogs", queries: {limit: 100}});
 
   const paths = data.contents.map((content: Blog) => `/article/${content.id}`);
   return { paths, fallback: false };
