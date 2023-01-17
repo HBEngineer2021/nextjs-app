@@ -8,7 +8,7 @@ export function SideMenu({
     categories,
 }: Props) {
     return (
-        <div className="pt-10">
+        <div className="pt-10 invisible md:visible lg:visible xl:visible">
             <div className="container mx-auto bg-zinc-700 rounded">
                 <div className="container pl-6 pt-6 text-2xl font-semibold text-white">
                     #Category

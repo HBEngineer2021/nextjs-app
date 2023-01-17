@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { SideMenu } from '../components/SideMenu';
 import { Category } from '../types/category';
+import { PageControl } from '../components/PageControl';
 
 type Props = {
   blogs: Array<Blog>;
@@ -51,6 +52,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         </div>
         <SideMenu categories={categories} />
       </div>
+      {/* <PageControl blogs={blogs} /> */}
     </div>
   );
 }
