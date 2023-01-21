@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Category } from '../types/category';
 
 type Props = {
@@ -17,7 +18,11 @@ export function CategoryArea({
                     {categories.map(category => (
                         <div className="p-2" key={category.id}>
                             <span className="inline-block bg-zinc-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                                #{category.name}
+                                <Link href={`/category/${category.name}/`} passHref >
+                                    <a>
+                                        #{category.name}
+                                    </a>
+                                </Link>
                             </span>
                         </div>
                     ))}
