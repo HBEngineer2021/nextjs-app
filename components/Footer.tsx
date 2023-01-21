@@ -24,10 +24,42 @@ const FooterContainer = styled('div')({
 
 export const Footer = memo(function footer() {
     return (
-        <div className='relative pb-32 box-border'>
+        <div className='relative h-screen box-border'>
             <FooterContainer>
                 <Grid item xs={10} md={8}>
-                    <div className="border-t-4 border-indigo-500"></div>
+                    {/* <div className="grid grid-cols-3 gap-3">
+                        <Grid item sx={{ textAlign: 'left' }}>
+                            <div className="container inline-block font-bold">
+                                About
+                            </div>
+                            <ul>
+                                <li>aaaaaaa</li>
+                                <li>bbbbbbb</li>
+                                <li>ccccccc</li>
+                            </ul>
+                        </Grid>
+                        <Grid item sx={{ textAlign: 'left' }}>
+                            <div className="container inline-block font-bold">
+                                Links
+                            </div>
+                            <ul>
+                                <li>aaaaaaa</li>
+                                <li>bbbbbbb</li>
+                                <li>ccccccc</li>
+                            </ul>
+                        </Grid>
+                        <Grid item sx={{ textAlign: 'left' }}>
+                            <div className="container inline-block font-bold">
+                                Legal
+                            </div>
+                            <ul>
+                                <li>aaaaaaa</li>
+                                <li>bbbbbbb</li>
+                                <li>ccccccc</li>
+                            </ul>
+                        </Grid>
+                    </div> */}
+                    <div className="my-3 border-t-2 border-indigo-500" />
                     <Grid item sx={{ textAlign: 'center' }}>
                         <a href='https://github.com/HBEngineer2021'>
                             <GitHubIcon sx={{ m: 1 }} />

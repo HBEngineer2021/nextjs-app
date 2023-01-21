@@ -18,10 +18,11 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   categories,
 }: Props) => {
   return (
-    <div className="w-screen bg-black">
+    <div className="w-full h-full">
       <Head>
         <title>記事一覧 | Mobile Developer Docs</title>
         <meta name="description" content="iOS & Android Developer Documentation" />
+        <meta name="theme-color" content="#27272A" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="container text-white font-bold text-lg mx-auto px-10 pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
@@ -39,10 +40,10 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                       src={blog.eyecatch.url}
                       alt="Sunset in the mountains"
                     />
-                    <div className="transition ease-in-out delay-150 text-white hover:text-zinc-400 duration-30 px-6 py-4 font-bold text-lg">
+                    <div className="transition ease-in-out delay-150 text-white hover:text-zinc-400 duration-30 px-1 py-3 font-bold text-lg">
                       {blog.title}
                     </div>
-                    <div className="px-6 pt-4 pb-2">
+                    <div className="px-1 py-3">
                       {blog.category && (
                         <span className="inline-block bg-zinc-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                           #{blog.category}
