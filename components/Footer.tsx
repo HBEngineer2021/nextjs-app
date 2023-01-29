@@ -17,17 +17,13 @@ const FooterContainer = styled('div')({
     display: 'flex',
     justifyContent: 'space-around',
     flexWrap: 'wrap',
-    position: 'absolute',
-    bottom: '0',
-    width: '100%',
 });
 
 export const Footer = memo(function footer() {
     return (
-        <div className='relative h-screen box-border'>
-            <FooterContainer>
-                <Grid item xs={10} md={8}>
-                    {/* <div className="grid grid-cols-3 gap-3">
+        <FooterContainer>
+            <Grid item xs={10} md={8}>
+                {/* <div className="grid grid-cols-3 gap-3">
                         <Grid item sx={{ textAlign: 'left' }}>
                             <div className="container inline-block font-bold">
                                 About
@@ -59,26 +55,25 @@ export const Footer = memo(function footer() {
                             </ul>
                         </Grid>
                     </div> */}
-                    <div className="my-3 border-t-2 border-indigo-500" />
-                    <Grid item sx={{ textAlign: 'center' }}>
-                        <a href='https://github.com/HBEngineer2021'>
-                            <GitHubIcon sx={{ m: 1 }} />
-                        </a>
-                        <a href='https://note.com/branch_it_sol205'>
-                            <NoteIcon sx={{ m: 1 }} />
-                        </a>
-                        <a href='https://developer.apple.com/documentation/technologies'>
-                            <AppleIcon sx={{ m: 1 }} />
-                        </a>
-                        <a href='https://developer.android.com/guide'>
-                            <AdbIcon sx={{ m: 1 }} />
-                        </a>
-                    </Grid>
-                    <Typography variant='body2' sx={{ textAlign: 'center', fontWeight: '200' }}>
-                        © 2022 - 2023 Mobile Developer Docs
-                    </Typography>
+                <div className="my-3 border-t-2 border-indigo-500" />
+                <Grid item sx={{ textAlign: 'center' }}>
+                    <a href='https://github.com/HBEngineer2021'>
+                        <GitHubIcon sx={{ m: 1 }} />
+                    </a>
+                    <a href='https://note.com/branch_it_sol205'>
+                        <NoteIcon sx={{ m: 1 }} />
+                    </a>
+                    <a href='https://developer.apple.com/documentation/technologies'>
+                        <AppleIcon sx={{ m: 1 }} />
+                    </a>
+                    <a href='https://developer.android.com/guide'>
+                        <AdbIcon sx={{ m: 1 }} />
+                    </a>
                 </Grid>
-            </FooterContainer>
-        </div>
+                <Typography variant='body2' sx={{ textAlign: 'center', fontWeight: '200' }}>
+                    © 2022 - 2023 Mobile Developer Docs
+                </Typography>
+            </Grid>
+        </FooterContainer>
     );
 });
