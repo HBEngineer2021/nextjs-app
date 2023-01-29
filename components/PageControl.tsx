@@ -12,7 +12,7 @@ export function PageControl({
     blogs,
 }: Props) {
     return (
-        <div className="pt-5 w-full">
+        <div className="grid justify-items-center col-span-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1">
             <Grid item xs={10} md={8}>
                 <Grid item sx={{ textAlign: 'center' }}>
                     <a href='https://github.com/HBEngineer2021'>
